@@ -1,5 +1,5 @@
 {
-	"name": "cds/cloudinbox-client",
+	"name": "cloudsystems/cloudinbox-client",
 	"description": "Client library for Cloud Inbox",
 	"type": "library",
 	"require": {
@@ -9,7 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"cds\\cloudinbox\\": "src/"
+			"cloudsystems\\cloudinbox\\": "src/"
 		}
 	},
 	"prefer-stable": true
