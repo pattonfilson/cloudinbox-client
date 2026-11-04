@@ -58,14 +58,14 @@ class CloudInbox
 	 * @return void
 	 *
 	 */
-	public function __construct(string $apiKey, string $apiSecret, string $uri = null, HttpClient $guzzle = null)
+	public function __construct(string $apiKey, string $apiSecret, ?string $uri = null, ?HttpClient $guzzle = null)
 	{
 		$this->apiKey = $apiKey;
 		$this->apiSecret = $apiSecret;
 
-		$baseUri = $uri ?: 'https://cloudinbox.clouddataservice.co.uk/';
+		$baseUri = $uri ?? 'https://cloudinbox.clouddataservice.co.uk/';
 
-		$this->guzzle = $guzzle ?: new HttpClient([
+		$this->guzzle = $guzzle ?? new HttpClient([
 			'base_uri' => $baseUri,
 			'auth' => [$this->apiKey, $this->apiSecret],
 			'headers' => [
